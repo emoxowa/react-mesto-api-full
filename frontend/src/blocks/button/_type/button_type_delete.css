@@ -1,0 +1,29 @@
+.button_type_delete {
+  font-family: 'Inter';
+  width: 100%;
+  height: 50px;
+  background: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  border-radius: 2px;
+  margin: 0;
+}
+
+.button_type_save:hover {
+  opacity: 0.8;
+}
+
+.button_type_save[disabled]:hover {
+  opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+  .button_type_save {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 35px;
+  }
+}

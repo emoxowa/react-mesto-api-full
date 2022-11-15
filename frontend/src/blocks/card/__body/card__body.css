@@ -1,0 +1,7 @@
+.card__body {
+ display: flex;
+ justify-content: space-between;
+ padding: 25px 21px 31px;
+ align-items: center;
+ gap: 30px;
+}

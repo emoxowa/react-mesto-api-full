@@ -1,0 +1,33 @@
+.profile__name {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(26px + 16 * (100vw / 1280));
+  line-height: 80%;
+  padding-right: 18px;
+  word-wrap: break-all;
+  letter-spacing:0.05ex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+@media (min-width: 1281px) {
+  .profile__name {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile__name {
+    font-size: calc(26px + (16 + 16 * 0.7) * ((100vw - 320px)/ 1280));
+    padding-right: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile__name {
+    font-size: 26px;
+  }
+}

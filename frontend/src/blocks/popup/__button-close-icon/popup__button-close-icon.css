@@ -1,0 +1,23 @@
+.popup__button-close-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -40px;
+  right: -40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.popup__button-close-icon:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .popup__button-close-icon {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: -36px;
+  }
+}

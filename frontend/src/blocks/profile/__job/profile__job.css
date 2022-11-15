@@ -1,0 +1,33 @@
+.profile__job {
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(14px + 4 * (100vw / 1280));
+  line-height: 22px;
+  margin:8px 0 0;
+  letter-spacing:0.01ex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (min-width: 1281px) {
+  .profile__job {
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .profile__job {
+    font-size: calc(14px + (4 + 4 *0.7) * ((100vw - 320px) / 1280));
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile__job {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 6px;
+  }
+}

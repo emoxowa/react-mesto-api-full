@@ -1,0 +1,16 @@
+.button_type_edit {
+  padding: 6px;
+  vertical-align:baseline;
+  margin-bottom: 8px;
+}
+
+.button_type_edit:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 320px) {
+  .button_type_edit {
+    height: 18px;
+    width: 18px;
+  }
+}
