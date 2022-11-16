@@ -6,7 +6,6 @@ const allowedCors = [
 ];
 
 const cors = (req, res, next) => {
-  console.log(req.headers);
   const { origin } = req.headers;
   const { method } = req;
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
