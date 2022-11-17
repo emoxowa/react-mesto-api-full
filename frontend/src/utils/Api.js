@@ -93,11 +93,10 @@ class Api {
 };
 
 const api = new Api({
-    baseUrl: "https://mesto.nomoreparties.co/v1/cohort-46",
-    headers: {
-      authorization: "7f0a4e86-e84d-44bd-b3f3-cc21b6ec49e1",
-      "Content-Type": "application/json",
-    },
-  });
+  baseUrl: "https://api.mesto.yandex.nomoredomains.icu",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-  export {api};
+export {api};
