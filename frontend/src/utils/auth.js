@@ -1,4 +1,4 @@
-export const baseUrl = "http://api.mesto.yandex.nomoredomains.icu";
+export const baseUrl = "https://api.mesto.yandex.nomoredomains.icu";
 
 export const checkResponse = (res) =>
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
