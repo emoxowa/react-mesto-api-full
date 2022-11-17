@@ -7,7 +7,7 @@ const { errors } = require('celebrate');
 const routes = require('./routes/index');
 const handleError = require('./middlewares/handle-error');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-// const cors = require('./middlewares/cors');
+const cors = require('./middlewares/cors');
 
 dotenv.config();
 
@@ -25,7 +25,7 @@ mongoose
   });
 
 const app = express();
-// app.use(cors);
+app.use(cors);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
