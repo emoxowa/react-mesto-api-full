@@ -1,5 +1,7 @@
 const allowedCors = [
   'https://mesto.yandex.nomoredomains.icu',
+  'https://localhost:3000',
+  'http://localhost:3000',
 ];
 
 const cors = (req, res, next) => {
