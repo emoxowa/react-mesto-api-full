@@ -70,6 +70,45 @@ function App() {
     setIsInfoTooltipOpen(true);
   }
 
+    function checkToken() {
+      const token = localStorage.getItem("token");
+      console.log(token);
+      if (token) {
+        auth
+          .getToken(token)
+          .then((res) => {
+            if (res) {
+              setLoggedIn(true);
+              setUserData(res.email);
+              console.log(res);
+              history.push("/");
+            } else {
+              setDataInfoTool({
+                title: "Что-то пошло не так! Попробуйте ещё раз.",
+                icon: failIcon,
+              });
+              handleInfoTooltipOpen();
+            }
+          })
+          .catch((err) => console.log(`Error ${err}`));
+      }
+    }
+
+    useEffect(() => {
+      checkToken();
+
+      const promises = [
+        api.getUserInfoFromServer(),
+        api.getInitialCardsFromServer(),
+      ];
+
+      Promise.all(promises)
+        .then(([user, dataCards]) => {
+          setCurrentUser(user);
+          setCards(dataCards);
+        })
+        .catch((err) => console.log(`Error ${err}`));
+    }, []);
   function handleCardLike(card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
@@ -182,46 +221,6 @@ function App() {
     history.push("/sign-in");
   }
   
-  function checkToken() {
-    const token = localStorage.getItem("token");
-    console.log(token);
-    if (token) {
-      auth
-        .getToken(token)
-        .then((res) => {
-          if (res) {
-            setLoggedIn(true);
-            setUserData(res.email);
-            console.log(res);
-            history.push("/");
-          } else {
-            setDataInfoTool({
-              title: "Что-то пошло не так! Попробуйте ещё раз.",
-              icon: failIcon,
-            });
-            handleInfoTooltipOpen();
-          }
-        })
-        .catch((err) => console.log(`Error ${err}`));
-    }
-  }
-
- useEffect(() => {
-   checkToken();
-
-   const promises = [
-     api.getUserInfoFromServer(),
-     api.getInitialCardsFromServer(),
-   ];
-
-   Promise.all(promises)
-     .then(([user, dataCards]) => {
-       setCurrentUser(user);
-       setCards(dataCards);
-     })
-     .catch((err) => console.log(`Error ${err}`));
- }, []);
-
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
