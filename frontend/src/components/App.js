@@ -184,13 +184,15 @@ function App() {
   
   function checkToken() {
     const token = localStorage.getItem("token");
+    console.log(token);
     if (token) {
       auth
-        .checkToken(token)
+        .getToken(token)
         .then((res) => {
           if (res) {
             setLoggedIn(true);
-            setUserData(res.data.email);
+            setUserData(res.email);
+            console.log(res);
             history.push("/");
           } else {
             setDataInfoTool({
@@ -205,20 +207,20 @@ function App() {
   }
 
  useEffect(() => {
-    checkToken();
-    
-    const promises = [
-      api.getUserInfoFromServer(),
-      api.getInitialCardsFromServer(),
-    ];
+   checkToken();
 
-    Promise.all(promises)
-      .then(([user, dataCards]) => {
-        setCurrentUser(user);
-        setCards(dataCards);
-      })
-      .catch((err) => console.log(`Error ${err}`));
-  },[])
+   const promises = [
+     api.getUserInfoFromServer(),
+     api.getInitialCardsFromServer(),
+   ];
+
+   Promise.all(promises)
+     .then(([user, dataCards]) => {
+       setCurrentUser(user);
+       setCards(dataCards);
+     })
+     .catch((err) => console.log(`Error ${err}`));
+ }, []);
 
   return (
     <div className="page">
