@@ -6,8 +6,8 @@ export const checkResponse = (res) =>
 export const register = (email, password) => {
   return fetch(`${baseUrl}/signup`, {
     method: "POST",
+    credentials: "include",
     headers: {
-      credentials: "include",
       Accept: "application/json",
       "Content-Type": "application/json",
     },
@@ -19,8 +19,8 @@ export const authorize = (email, password) => {
   console.log('auth');
   return fetch(`${baseUrl}/signin`, {
     method: "POST",
+    credentials: "include",
     headers: {
-      credentials: "include",
       Accept: "application/json",
       "Content-Type": "application/json",
     },
@@ -31,8 +31,8 @@ export const authorize = (email, password) => {
 export const getToken = (token) => {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
+    credentials: "include",
     headers: {
-      credentials: "include",
       Accept: "application/json",
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
