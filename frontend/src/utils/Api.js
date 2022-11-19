@@ -14,18 +14,24 @@ class Api {
 
   getUserInfoFromServer() {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
-    }).then(
-      (res) => {
-        return this._checkAnswer(res);
-      }
-    );
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
+    }).then((res) => {
+      return this._checkAnswer(res);
+    });
   }
 
   setUserInfoFromServer({ name, job }) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
       body: JSON.stringify({
         name: name,
         about: job,
@@ -37,18 +43,24 @@ class Api {
 
   getInitialCardsFromServer() {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
-    }).then(
-      (res) => {
-        return this._checkAnswer(res);
-      }
-    );
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
+    }).then((res) => {
+      return this._checkAnswer(res);
+    });
   }
 
   setCardToServer({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
       body: JSON.stringify({
         name: name,
         link: link,
@@ -61,7 +73,11 @@ class Api {
   deleteCardFromServer(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: "DELETE",
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
     }).then((res) => {
       return this._checkAnswer(res);
     });
@@ -77,7 +93,11 @@ class Api {
   changeLikeStatus(isLiked, cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: isLiked ? "DELETE" : "PUT",
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
     }).then((res) => {
       return this._checkAnswer(res);
     });
@@ -86,7 +106,11 @@ class Api {
   changeUserAvatar({ avatar }) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
-      headers: { authorization: `Bearer ${localStorage.getItem("token")}`, ...this._headers },
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+        ...this._headers,
+      },
+      credentials: "include",
       body: JSON.stringify({
         avatar: avatar,
       }),
