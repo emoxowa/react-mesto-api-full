@@ -110,7 +110,6 @@ const updateUserAvatar = (req, res, next) => {
 
 const login = (req, res, next) => {
   const { email, password } = req.body;
-  const cook = req.cookies;
   return User.findUserByCredentials(email, password)
     .then((user) => {
       const token = jwt.sign(
@@ -123,7 +122,7 @@ const login = (req, res, next) => {
         maxAge: 3600000 * 24 * 7,
         sameSite: true,
       });
-      res.send({ cook });
+      res.send({ "Авторизация прошла успешно" });
     })
     .catch(next);
 };
