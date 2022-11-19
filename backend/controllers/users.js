@@ -122,7 +122,7 @@ const login = (req, res, next) => {
         maxAge: 3600000 * 24 * 7,
         sameSite: true,
       });
-      res.send({ "Авторизация прошла успешно" });
+      res.send({ message: 'Авторизация прошла успешно!' });
     })
     .catch(next);
 };
