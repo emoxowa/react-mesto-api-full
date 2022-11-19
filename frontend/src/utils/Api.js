@@ -14,6 +14,7 @@ class Api {
 
   getUserInfoFromServer() {
     return fetch(`${this._baseUrl}/users/me`, {
+      method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
         ...this._headers,
@@ -43,6 +44,7 @@ class Api {
 
   getInitialCardsFromServer() {
     return fetch(`${this._baseUrl}/cards`, {
+      method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
         ...this._headers,
