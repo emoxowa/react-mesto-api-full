@@ -127,6 +127,14 @@ const login = (req, res, next) => {
     .catch(next);
 };
 
+const logout = (req, res, next) => {
+  try {
+    res.clearCookie('authorization').send({ message: 'Выход' });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getUsers,
   getUser,
@@ -135,4 +143,5 @@ module.exports = {
   updateUser,
   updateUserAvatar,
   login,
+  logout,
 };
