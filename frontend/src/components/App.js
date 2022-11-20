@@ -212,19 +212,20 @@ function App() {
 
   useEffect(() => {
     checkToken();
+    if (loggedIn) {
+      const promises = [
+        api.getUserInfoFromServer(),
+        api.getInitialCardsFromServer(),
+      ];
 
-    const promises = [
-      api.getUserInfoFromServer(),
-      api.getInitialCardsFromServer(),
-    ];
-
-    Promise.all(promises)
-      .then(([user, dataCards]) => {
-        setCurrentUser(user);
-        setCards(dataCards);
-      })
-      .catch((err) => console.log(`Error ${err}`));
-  }, []);
+      Promise.all(promises)
+        .then(([user, dataCards]) => {
+          setCurrentUser(user);
+          setCards(dataCards);
+        })
+        .catch((err) => console.log(`Error ${err}`));
+    }
+  }, [loggedIn]);
 
   return (
     <div className="page">
