@@ -175,10 +175,17 @@ function App() {
   }
 
   function onSignOut() {
-    setLoggedIn(false);
-    setUserData("");
-    localStorage.removeItem("token");
-    history.push("/sign-in");
+    return auth
+      .logout()
+      .then(() => {
+        setLoggedIn(false);
+        setUserData("");
+        localStorage.removeItem("token");
+        history.push("/sign-in");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
   
   function checkToken() {
