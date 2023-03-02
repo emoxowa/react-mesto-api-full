@@ -30,6 +30,15 @@ The main objective of this project is to develop a web application using React w
 ## Description
 The application utilizes several third-party libraries, including `react-router-dom` for routing, `gh-pages` for deployment. The application has been developed using the latest version of React (18.2.0) and includes various dependencies, including `@testing-library/react` and `@testing-library/jest-dom` for testing. The project includes scripts for building, testing, and deploying the application.
 
+## Installation
+
+1. Clone the repository: `https://github.com/emoxowa/react-mesto-api-full.git`
+2. Navigate to the frontend directory: `cd frontend`
+3. Install the frontend dependencies: `npm install`
+4. Navigate to the backend directory: `cd ../backend`
+5. Install the backend dependencies: `npm install`
+6. Run the development server: `npm run dev`
+
 ## Project Status:
 This project is completed and is no longer being actively maintained.
 
