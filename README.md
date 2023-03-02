@@ -30,6 +30,9 @@ The main objective of this project is to develop a web application using React w
 ## Description
 The application utilizes several third-party libraries, including `react-router-dom` for routing, `gh-pages` for deployment. The application has been developed using the latest version of React (18.2.0) and includes various dependencies, including `@testing-library/react` and `@testing-library/jest-dom` for testing. The project includes scripts for building, testing, and deploying the application.
 
+## Project Status:
+This project is completed and is no longer being actively maintained.
+
 ## Conclusion
 This project has provided an opportunity to apply the acquired web development skills and knowledge to develop a web application using React. The project includes the latest web development technologies and methodologies, making it a valuable learning experience for aspiring web developers.
   
