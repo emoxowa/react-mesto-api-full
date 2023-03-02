@@ -1,8 +1,29 @@
-# 📚 Educational project: "Russian Travel" "Mesto React Auth"
+# 📚 Educational project: "Mesto React Auth"
 [Yandex Practicum - Course "Web Developer"](https://practicum.yandex.ru/web/)
 
 ## Introduction
-This repository contains the project work titled "Mesto React Auth" which is a web application developed using React. The application is developed as part of an educational project to practice web development skills and knowledge.
+This project is a full-stack web application that allows users to share photos of their favorite places.
+
+* IP 51.250.66.98
+* Frontend https://mesto.yandex.nomoredomains.icu/
+* Backend https://api.mesto.yandex.nomoredomains.icu/
+
+## Frontend
+The frontend was built with React, utilizing functional components and hooks. The following technologies were used:
+* React
+* React Router DOM
+* Webpack
+* Babel
+
+## Backend
+The backend was built with Node.js and Express, utilizing MongoDB for data storage. The following technologies were used:
+* Node.js
+* Express
+* MongoDB
+* Mongoose
+* Bcryptjs
+* Celebrate
+* Jsonwebtoken
 
 ## Project Objective
 The main objective of this project is to develop a web application using React with user authentication functionality.
@@ -12,13 +33,7 @@ The application utilizes several third-party libraries, including `react-router-
 
 ## Conclusion
 This project has provided an opportunity to apply the acquired web development skills and knowledge to develop a web application using React. The project includes the latest web development technologies and methodologies, making it a valuable learning experience for aspiring web developers.
-
-
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. 
   
-Ссылка на репозиторий: https://github.com/emoxowa/react-mesto-api-full
+## Website link
+To open the website, click on the following link 👉🏻: https://mesto.yandex.nomoredomains.icu/
 
-* IP 51.250.66.98
-* Frontend https://mesto.yandex.nomoredomains.icu/
-* Backend https://api.mesto.yandex.nomoredomains.icu/
