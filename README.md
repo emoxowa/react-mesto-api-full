@@ -1,4 +1,4 @@
-# 📚 Educational project: "Mesto React Auth"
+# 📚 Educational project: "Mesto React"
 
 ## Introduction
 This project is a full-stack web application that allows users to share photos of their favorite places.
