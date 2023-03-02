@@ -1,5 +1,4 @@
 # 📚 Educational project: "Mesto React Auth"
-[Yandex Practicum - Course "Web Developer"](https://practicum.yandex.ru/web/)
 
 ## Introduction
 This project is a full-stack web application that allows users to share photos of their favorite places.
