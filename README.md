@@ -4,8 +4,6 @@
 This project is a full-stack web application that allows users to share photos of their favorite places.
 
 * IP 51.250.66.98
-* Frontend https://mesto.yandex.nomoredomains.icu/
-* Backend https://api.mesto.yandex.nomoredomains.icu/
 
 ## Frontend
 The frontend was built with React, utilizing functional components and hooks. The following technologies were used:
