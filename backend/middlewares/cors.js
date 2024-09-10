@@ -2,7 +2,8 @@ const allowedCors = [
   'https://mesto.yandex.nomoredomains.icu',
   'https://localhost:3000',
   'http://localhost:3000',
-  'https://react-mesto-frontend-three.vercel.app/',
+  'https://react-mesto-frontend-three.vercel.app',
+  'https://react-mesto-api-full-psi.vercel.app',
 ];
 
 const cors = (req, res, next) => {
