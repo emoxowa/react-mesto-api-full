@@ -123,7 +123,7 @@ class Api {
 };
 
 const api = new Api({
-  baseUrl: "https://api.mesto.yandex.nomoredomains.icu",
+  baseUrl: "https://react-mesto-api-full-psi.vercel.app",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
