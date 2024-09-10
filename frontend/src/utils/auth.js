@@ -1,4 +1,4 @@
-export const baseUrl = "https://api.mesto.yandex.nomoredomains.icu";
+export const baseUrl = "https://react-mesto-api-full-psi.vercel.app";
 
 export const checkResponse = (res) =>
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
