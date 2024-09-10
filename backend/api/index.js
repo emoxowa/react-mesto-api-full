@@ -27,7 +27,7 @@ const app = express();
 app.use(cors);
 app.use(
   limiter({
-    windowMs: 15 * 60 * 1000,
+    windowMs: 30 * 60 * 1000,
     max: 100,
   }),
 );
